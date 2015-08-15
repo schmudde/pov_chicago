@@ -1,123 +1,127 @@
-{% extends "_base.html" %}
-{% block css %}
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-<div class="container">
-  <h1>Tarbell: Build stories, not websites.</h1>
+<head>
 
-  <h3>This template will explain a few of Tarbell's key features. For a more in-depth walkthrough, we recommend the <a href="http://tarbell.readthedocs.org/en/0.9-beta5/tutorial.html">tutorial</a>.</h3>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Scrolling Nav - Start Bootstrap Template</title>
 
-  <h3>Template basics</h3>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <p>Tarbell uses <a href="http://jinja.pocoo.org/">Jinja2</a> for templating. Read the <a href="http://jinja.pocoo.org/docs/">excellent documentation</a> to learn more about using Jinja.
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
 
-  <p>This base template uses the <a href="http://getbootstrap.com/">Twitter Bootstrap</a> CSS framework.</p>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-  <h3>Working with context variables</h3>
+</head>
 
-  {% if SPREADSHEET_KEY %}
-  <p>This project uses Google spreadsheets to manage context variables. The spreadsheet <a href="https://docs.google.com/spreadsheet/ccc?key={{ SPREADSHEET_KEY }}#gid=0" target="_BLANK">can be edited here</a>.</p>
-  {% else %}
-  <p>This project does not use Google spreadsheets to manage context variables. They must be set in the <code>DEFAULT_CONTEXT</code> section of <code>{{ PROJECT_PATH }}/tarbell_config.py</code>.</p>
-  {% endif %}
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-  <p>In the <em>values</em> worksheet, there are columns named <code>key</code> and <code>value</code>. Every value is available to the template by referencing the key. Here's an example:</p>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-  <p>The key is <code>headline</code> and the value <strong>{{ headline }}</strong>.</p>
-  <p>Print this headline in your code with something like <code>{{ "<strong>{{ headline }}</strong>" }}</code>.
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <h3>Access data with a loop:</h3>
-    <p><em>Use the worksheet name to access data.</em></p>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-<pre>
-{{ "{% for row in data %}" }}
-{{ "<p>" }}
-{{ "  <strong>{{ row.column1 }}</strong>:" }}
-{{ "  {{ row.column2 }}" }}
-{{ "</p>" }}
-{{ "{% endfor %}" }}
-</pre>
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Scrolling Nav</h1>
+                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p>Output:</p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    {% for row in data %}
-    <p>
-      <strong>{{ row.column1 }}:</strong>
-      {{ row.column2 }}
-    </p>
-    {% endfor %}
-  </div>
-  <div class="col-md-6">
-    <h3>Access data by key</h3>
-    <p><em>Requires a column named <code>key</code>.</em></p>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Services Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<pre>
-{{ "<p>" }}
-{{ "  <strong>key1, column 1</strong>:" }} 
-{{ "  {{ keyed_data.key1.column1 }}" }}
-{{ "</p>" }}
-{{ "<p>" }}
-{{ "  <strong>key2, column 2</strong>:" }} 
-{{ "  {{ keyed_data.key2.column2 }}" }}
-{{ "</p>" }}
-</pre>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p>Output:</p>
-    <p>
-      <strong>key1, column 1</strong>:
-      {{ keyed_data.key1.column1 }}
-    </p>
-    <p>
-      <strong>key2, column 2</strong>:
-      {{ keyed_data.key2.column2 }}</p>
-  </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-  <h3>Overriding the base template</h3>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-  <p>All files in the <code>_base</code> directory are available from the root path of the preview server and published project. So <code>_base/css/base.css</code> can be previewed <code>http://localhost:5000/css/base.css</code>. However, if you create a file with the same name and path relative to your project directory, this file will be served up instead.</p>
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
-  <p>This base template comes with basic template snippets that are intended to be overridden. To add a custom header or footer for your project, simply copy <code>_base/_nav.html</code> or <code>_base/_footer.html</code> into your project directory and edit it, or create your own.</p>
+</body>
 
-  <h3>Tarbell config</h3>
-
-  <p>To change this project's S3 configuration or default context, edit <code>{{ PROJECT_PATH }}/tarbell_config.py</code>.</p>
-
-  <h3>Hiding files from publication</h3>
-
-  <p>Files and directories prefixed with an underscore (<code>_</code>) as well as any file pattern specified in <code>tarbell_config.py</code> will not be published. These files can still be previewed locally.</p>
-</div>
-
-  {% include "_map.html" %}
-{% endblock content %}
-{% block scripts %}
-<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-<script type="text/javascript">
-
- $(document).ready(function(){
-
-    var map_data = {{ data|tojson }}
-
-    var map = L.map('map').setView([map_data[0].latitude, map_data[0].longitude], 6);
-
-
-    L.tileLayer(
-      'http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 16,
-        minZoom: 5
-    }).addTo(map);
-
-  for (i=0; i <= map_data.length; i++){
-      var marker = L.marker([map_data[i].latitude, map_data[i].longitude]);
-      marker.bindPopup('<h3>This is the city of ' + map_data[i].city + '</h3>');
-      marker.addTo(map);
-  }
-
-  });
-</script>
-{% endblock %}
+</html>
