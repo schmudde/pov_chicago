@@ -3,25 +3,28 @@ body{
   margin: none !important;
 }
 #landing {
-  background-color: yellow;
+  background-image: url('Chicago.jpg');
   width: 100%;
   height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #twelve {
-  background-color: lightblue;
   height: 20vh;
+  font-size: 36px;
 }
 
-#one {
+.col-lg-1 {
   text-align: left;
 }
 
-.four {
+.col-lg-4 {
   background-color: yellow;
   text-align: left;
 }
 
-#three {
+#two {
   text-align: left;
 }
