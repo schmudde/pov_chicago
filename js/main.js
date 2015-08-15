@@ -15,7 +15,7 @@ var tree = [
                 label: "Play",
                 next: {
                     id: "start",
-                    video: "1-intro",
+                    video: "video",
                     sub_title: "Will you help?",
                     before: resetPlayer,
                     choices: [
@@ -142,5 +142,5 @@ var tree = [
     }
 ];
 
-vce.init(tree, {el: "#container", video_url: "http://s3-eu-west-1.amazonaws.com/joebain/socks/videos/"});
+vce.init(tree, {el: "#container"});
 
