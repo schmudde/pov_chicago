@@ -11,6 +11,7 @@ var quotelist = [
 
 
   ["The mayor’s media office said, 'You embarrassed the Mayor, this is not appropriate.' And our response was, Well, this coal power plant in our neighborhood is not appropriate.'","Listen, you're in my house. You're not going to get a good response from me. No, no, no, no, no. Shhh. Shame on you. Escort this person out.",1, "Kim Nieto, 2015", "Barack Obama, 2015"]
+
 ];
 
 
@@ -32,10 +33,12 @@ function displaynewquotes(){
 
 
     // Place in the new text
-    $( "#quote0" ).text(
-        quotelist[questionnumber][0] + <div class=s'attribution'> + quotelist[questionnumber][3] + "&lt;/div&gt;"
+    $( "#quote0" ).html(
+        quotelist[questionnumber][0] + "<div class='attribution'>" + quotelist[questionnumber][3] + "</div>"
     );
-    $( "#quote1" ).text(quotelist[questionnumber][1]);
+    $( "#quote1" ).html(
+        quotelist[questionnumber][1] + "<div class='attribution'>" + quotelist[questionnumber][4] + "</div>"
+    );
 
     // Once the animation complete, remove the 'fadeIn' class
     $('#quote0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
