@@ -23,7 +23,60 @@ body{
   font-size: 36px;
 }
 
+#box {
+  background-image: url('../img/visionary.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-items: left;
+  height: 150px;
+}
 
+#boxC {
+  background-image: url('../img/commander.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-items: left;
+  height: 150px;
+
+}
+
+#space_box {
+  align-items: left;
+  height: 150px;
+}
+
+#text{
+  align-items: left;
+  height: 150px;
+}
+
+#boxes {
+  align-items: left;
+  outline: black solid thick;
+  height: 100px;
+  padding-top: 100px;
+}
+
+#foot{
+  font-family: 'Squada One', serif;
+  font-size: 24px;
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+}
+
+.row {
+  padding: 15px;
+}
+
+
+#space1 {
+  align: left;
+}
+
+#space2 {
+  align: left;
+}
 .col-lg-5 {
   text-align: center;
   font-weight: 400;
@@ -67,12 +120,6 @@ video#bgvid {
 	background-size: cover;
     opacity: .3;
 }
-
-
-
-
-
-
 
 #video-content{
   display: none;
