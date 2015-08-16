@@ -1,7 +1,7 @@
 body{
   padding: none !important;
   margin: none !important;
-  font-family: 'Tienne', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 #landing {
@@ -13,7 +13,7 @@ body{
   background-size: cover;
 }
 
-#twelve {
+#titleContainer {
   height: 20vh;
   font-size: 36px;
 }
@@ -22,11 +22,12 @@ body{
   text-align: left;
 }
 
-.col-lg-4, .col-lg-5 {
+.col-lg-5 {
   text-align: left;
-  font-weight: 900;
-  font-size: 50px;
-  color: rgba(255,255,255,0.85);;
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.06em;
+  color: rgba(55,55,55,0.85);;
 }
 
 #negative {
@@ -37,8 +38,9 @@ body{
     padding-left: 30px;
 }
 
-#two {
-  text-align: left;
+.attribution {
+    font-size: 20px;
+    display: none;
 }
 
 /**
@@ -51,4 +53,5 @@ video#bgvid {
 	width: auto; height: auto; z-index: -100;
 	/* background: url(polina.jpg) no-repeat; */
 	background-size: cover;
+    opacity: .3;
 }
