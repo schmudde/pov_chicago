@@ -22,10 +22,10 @@ function displaynewquotes(){
     $( "#quote0" ).addClass('animated fadeIn');
     $( "#quote1" ).addClass('animated fadeIn');
 
-    console.log (quotelist[questionnumber][0] + "<div class='attribution'>" + quotelist[questionnumber][3] + "</div>");
+
     // Place in the new text
     $( "#quote0" ).text(
-        quotelist[questionnumber][0] + "<div class='attribution'>" + quotelist[questionnumber][3] + "&lt;/div&gt;"
+        quotelist[questionnumber][0] + <div class=s'attribution'> + quotelist[questionnumber][3] + "&lt;/div&gt;"
     );
     $( "#quote1" ).text(quotelist[questionnumber][1]);
 
