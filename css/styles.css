@@ -23,16 +23,18 @@ body{
   font-size: 36px;
 }
 
-.col-lg-1 {
-  text-align: left;
-}
 
 .col-lg-5 {
-  text-align: left;
+  text-align: center;
   font-weight: 400;
   font-size: 48px;
   letter-spacing: 0.06em;
   color: rgba(55,55,55,0.85);;
+  padding-top: 100px;
+}
+
+.col-lg-1 {
+  align-items: left;
 }
 
 #quote0 {
