@@ -1,5 +1,5 @@
 var quotelist = [
-  ["Civilization is a method of living, an attitude of equal respect for all men.", "There was nothing left to do but uplift and civilize them.",0, "Jane Addams, 1919", "William McKinley, 1898"]
+  ["Civilization is a method of living, an attitude of equal respect for all men.", "There was nothing left to do but uplift and civilize them.",0, "Jane Addams, 1919", "William McKinley, 1898"],
 
     ["We had to have a lot of tough conversations about class, race, privilege","Show me someone without and ego, and I'll show you a loser",0, "Kim Nieto, 2015", "William McKinley, 1898"],
 
