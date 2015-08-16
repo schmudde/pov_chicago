@@ -1,13 +1,10 @@
 var quotelist = [
-  ["People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
-  ["Positive!","Negative!",0],
-  ["People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
-  ["People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1]
+  ["1) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
+  ["2) Positive!","2) Negative!",0],
+  ["3) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
+  ["4) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1]
 ];
 
-// var quoteList1 = [
-//
-// ]
 
 
 var scorepositive;
@@ -38,82 +35,65 @@ function displaynewquotes(){
     });
 }
 
-console.log(questionnumber);
+var nextQuestion = function(quote) {
+    return function (bounceSide) {
+        // 'bounceOut' the animation
+        var classes = 'animated ' + bounceSide;
+        $(quote).addClass(classes);
+
+        // remove the 'bounceOut' animation class & display the new quotes
+        $(quote).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass(classes)
+            displaynewquotes();
+        });
+    }
+}
+
+function score () {
+
+    if (quotelist[questionnumber][2] === 0){
+      scorepositive++;
+    }
+    else if (quotelist[questionnumber][2] === 1){
+      scorenegative++;
+    }
+
+    questionnumber++;
+    console.log(questionnumber);
+
+}
+
+function video() {
+    $("#video-content").show();
+    $("#landing").hide();
+}
 
 $( "#quote0" ).click(function() {
   //add to the correct score based on which kind of quote this is.
-    questionnumber++;
 
+  score();
 
-  if (quotelist[questionnumber][2] === 0){
-    scorepositive++;
-  }
-
-   else if (quotelist[questionnumber][2] === 1){
-    scorenegative++;
-  }
-
-  questionnumber++;
   if (questionnumber < quotelist.length){
-
-    // 'bounceOut' the animation
-    $( "#quote0" ).addClass('animated bounceOutLeft');
-
-    // remove the 'bounceOut' animation class & display the new quotes
-    $('#quote0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass('animated bounceOutLeft')
-        displaynewquotes();
-     });
+    var chosenQuote = nextQuestion('#quote0');
+    chosenQuote("bounceOutLeft");
   }
-
   else{
-    //display video
-    if(scorepositive > scorenegative){
-      $("landing").addClass('off');
-      $("video-content").addClass('on');
-    }
-    else{
-      //play video B
-      $("landing").addClass('off');
-      $("video-content").addClass('on');
-    }
+      video();
   }
 });
 
 
 $( "#quote1" ).click(function() {
-  //add to the correct score based on which kind of quote this is.
-  if (quotelist[questionnumber][2] === 1){
-    scorepositive++;
-  }
-  if (quotelist[questionnumber][2] === 0){
-    scorenegative++;
-  }
-  questionnumber++;
-  if (questionnumber < quotelist.length){
-    // 'bounceOut' the animation
-    $( "#quote1" ).addClass('animated bounceOutRight');
+    //add to the correct score based on which kind of quote this is.
+    score();
 
-    // remove the 'bounceOut' animation class & display the new quotes
-    $('#quote1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass('animated bounceOutRight')
-        displaynewquotes();
-     });
-
-  }
-  else{
-    //display video
-  }
+    if (questionnumber < quotelist.length){
+        var chosenQuote = nextQuestion('#quote1');
+        chosenQuote("bounceOutRight");
+    } else {
+        video();
+    }
 });
-
-  function video(){
-  if(scorepositive > scorenegative){
-    $("landing").innerHTML();
-  }
-  else{
-    //play video B
-  }
-}
 
 
 /*
