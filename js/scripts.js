@@ -1,7 +1,7 @@
 var quotelist = [
-  ["1) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
+    ["1) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1,"Donald Trump", "E. Debs"],
   ["2) Positive!","2) Negative!",0],
-  ["3) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
+    ["3) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
   ["4) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1]
 ];
 
@@ -22,8 +22,11 @@ function displaynewquotes(){
     $( "#quote0" ).addClass('animated fadeIn');
     $( "#quote1" ).addClass('animated fadeIn');
 
+    console.log (quotelist[questionnumber][0] + "<div class='attribution'>" + quotelist[questionnumber][3] + "</div>");
     // Place in the new text
-    $( "#quote0" ).text(quotelist[questionnumber][0]);
+    $( "#quote0" ).text(
+        quotelist[questionnumber][0] + "<div class='attribution'>" + quotelist[questionnumber][3] + "&lt;/div&gt;"
+    );
     $( "#quote1" ).text(quotelist[questionnumber][1]);
 
     // Once the animation complete, remove the 'fadeIn' class
