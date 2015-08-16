@@ -31,6 +31,15 @@ body{
   height: 150px;
 }
 
+#boxC {
+  background-image: url('../img/commander.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-items: left;
+  height: 150px;
+
+}
+
 #space_box {
   align-items: left;
   height: 150px;
