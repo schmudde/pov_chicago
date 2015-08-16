@@ -1,7 +1,9 @@
 body{
   padding: none !important;
   margin: none !important;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
 #landing {
   /*background-image: url('img/Chicago.jpg');*/
   width: 100%;
