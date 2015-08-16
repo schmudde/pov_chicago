@@ -42,8 +42,6 @@ console.log(questionnumber);
 
 $( "#quote0" ).click(function() {
   //add to the correct score based on which kind of quote this is.
-    questionnumber++;
-
 
   if (quotelist[questionnumber][2] === 0){
     scorepositive++;
