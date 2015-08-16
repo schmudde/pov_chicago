@@ -1,6 +1,6 @@
 var quotelist = [
     ["1) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1,"Donald Trump", "E. Debs"],
-  ["2) Positive!","2) Negative!",0],
+    ["2) Positive!","2) Negative!",0],
     ["3) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1],
   ["4) People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1]
 ];
@@ -24,10 +24,12 @@ function displaynewquotes(){
 
 
     // Place in the new text
-    $( "#quote0" ).text(
-        quotelist[questionnumber][0] + <div class=s'attribution'> + quotelist[questionnumber][3] + "&lt;/div&gt;"
+    $( "#quote0" ).html(
+        quotelist[questionnumber][0] + "<div class='attribution'>" + quotelist[questionnumber][3] + "</div>"
     );
-    $( "#quote1" ).text(quotelist[questionnumber][1]);
+    $( "#quote1" ).html(
+        quotelist[questionnumber][1] + "<div class='attribution'>" + quotelist[questionnumber][4] + "</div>"
+    );
 
     // Once the animation complete, remove the 'fadeIn' class
     $('#quote0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
