@@ -5,6 +5,10 @@ var quotelist = [
   ["People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1]
 ];
 
+// var quoteList1 = [
+//
+// ]
+
 
 var scorepositive;
 var scorenegative;
@@ -21,18 +25,31 @@ function displaynewquotes(){
 
 $( "#quote0" ).click(function() {
   //add to the correct score based on which kind of quote this is.
+  questionnumber++;
+
   if (quotelist[questionnumber][2] === 0){
     scorepositive++;
   }
-  if (quotelist[questionnumber][2] === 1){
+
+   else if (quotelist[questionnumber][2] === 1){
     scorenegative++;
   }
-  questionnumber++;
-  if (questionnumber < quotelist.length){
+
+  else if (questionnumber < quotelist.length){
     displaynewquotes();
   }
+
   else{
     //display video
+    if(scorepositive > scorenegative){
+      $("landing").addClass('off');
+      $("video-content").addClass('on');
+    }
+    else{
+      //play video B
+      $("landing").addClass('off');
+      $("video-content").addClass('on');
+    }
   }
 });
 
@@ -53,6 +70,15 @@ $( "#quote1" ).click(function() {
     //display video
   }
 });
+
+  function video(){
+  if(scorepositive > scorenegative){
+    $("landing").innerHTML();
+  }
+  else{
+    //play video B
+  }
+}
 
 
 /*
