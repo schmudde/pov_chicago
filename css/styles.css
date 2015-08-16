@@ -11,6 +11,11 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: block;
+}
+
+#landing.off{
+  display: none;
 }
 
 #titleContainer {
@@ -59,4 +64,18 @@ video#bgvid {
 	/* background: url(polina.jpg) no-repeat; */
 	background-size: cover;
     opacity: .3;
+}
+
+
+
+
+
+
+
+#video-content{
+  display: none;
+}
+
+#video-content.on{
+  display: block;
 }
