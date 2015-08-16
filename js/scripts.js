@@ -11,12 +11,27 @@ var scorenegative;
 
 var questionnumber = 0;
 
-displaynewquotes();
-
+$(document).ready(function(){
+    displaynewquotes();
+});
 
 function displaynewquotes(){
-  $( "#quote0" ).text(quotelist[questionnumber][0]);
-  $( "#quote1" ).text(quotelist[questionnumber][1]);
+
+    // 'fadeIn' the animation
+    $( "#quote0" ).addClass('animated fadeIn');
+    $( "#quote1" ).addClass('animated fadeIn');
+
+    // Place in the new text
+    $( "#quote0" ).text(quotelist[questionnumber][0]);
+    $( "#quote1" ).text(quotelist[questionnumber][1]);
+
+    // Once the animation complete, remove the 'fadeIn' class
+    $('#quote0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass('animated fadeIn')
+    });
+    $('#quote1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass('animated fadeIn')
+    });
 }
 
 $( "#quote0" ).click(function() {
@@ -29,7 +44,16 @@ $( "#quote0" ).click(function() {
   }
   questionnumber++;
   if (questionnumber < quotelist.length){
-    displaynewquotes();
+
+    // 'bounceOut' the animation
+    $( "#quote0" ).addClass('animated bounceOutLeft');
+
+    // remove the 'bounceOut' animation class & display the new quotes
+    $('#quote0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+
+        $(this).removeClass('animated bounceOutLeft')
+        displaynewquotes();
+     });
   }
   else{
     //display video
@@ -47,7 +71,15 @@ $( "#quote1" ).click(function() {
   }
   questionnumber++;
   if (questionnumber < quotelist.length){
-    displaynewquotes();
+    // 'bounceOut' the animation
+    $( "#quote1" ).addClass('animated bounceOutRight');
+
+    // remove the 'bounceOut' animation class & display the new quotes
+    $('#quote1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass('animated bounceOutRight')
+        displaynewquotes();
+     });
+
   }
   else{
     //display video

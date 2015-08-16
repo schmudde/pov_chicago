@@ -30,12 +30,17 @@ body{
   color: rgba(55,55,55,0.85);;
 }
 
-#negative {
+#quote0 {
     padding-right: 30px;
 }
 
-#positive {
+#quote1 {
     padding-left: 30px;
+}
+
+#quote0, #quote1 {
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 0.5s;
 }
 
 .attribution {
