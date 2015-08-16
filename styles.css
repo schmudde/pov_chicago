@@ -1,7 +1,7 @@
 body{
   padding: none !important;
   margin: none !important;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Tienne', sans-serif;
 }
 
 #landing {
@@ -22,9 +22,19 @@ body{
   text-align: left;
 }
 
-.col-lg-4 {
-  background-color: yellow;
+.col-lg-4, .col-lg-5 {
   text-align: left;
+  font-weight: 900;
+  font-size: 50;
+  color: rgba(255,255,255,0.85);;
+}
+
+#negative {
+    padding-right: 30px;
+}
+
+#positive {
+    padding-left: 30px;
 }
 
 #two {
