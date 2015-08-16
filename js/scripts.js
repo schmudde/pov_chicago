@@ -5,6 +5,7 @@ var quotelist = [
   ["People are virtually afraid to say, ‘I want the death penalty.’ Well, I want it.","All life is worth saving.",1]
 ];
 
+
 var scorepositive;
 var scorenegative;
 
@@ -16,7 +17,6 @@ displaynewquotes();
 function displaynewquotes(){
   $( "#quote0" ).text(quotelist[questionnumber][0]);
   $( "#quote1" ).text(quotelist[questionnumber][1]);
-  console.log("quotes should be displayed now")
 }
 
 $( "#quote0" ).click(function() {
@@ -28,8 +28,15 @@ $( "#quote0" ).click(function() {
     scorenegative++;
   }
   questionnumber++;
-  displaynewquotes();
+  if (questionnumber < quotelist.length){
+    displaynewquotes();
+  }
+  else{
+    //display video
+  }
 });
+
+
 $( "#quote1" ).click(function() {
   //add to the correct score based on which kind of quote this is.
   if (quotelist[questionnumber][2] === 1){
@@ -39,7 +46,12 @@ $( "#quote1" ).click(function() {
     scorenegative++;
   }
   questionnumber++;
-  displaynewquotes();
+  if (questionnumber < quotelist.length){
+    displaynewquotes();
+  }
+  else{
+    //display video
+  }
 });
 
 
