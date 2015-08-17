@@ -1,0 +1,44 @@
+    <!-- THIS IS THE VISIONARY PAGE  -->
+<!--    <div class="container-fluid" style="display:none" >
+    <div class="splash">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <h3 class ="col-lg-11">You are a</h3>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <h1 class ="col-lg-11">Visionary</h1>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class ="col-lg-2" id="box"></div>
+        <div class="col-lg-6" id="text">Visionaries are charismatic team players, focused on values. They are often resilient and adaptable, able to catalyze human growth. Yet visionaries can also become fixated on their beliefs to the point of rigidity. They are fearless when it comes to defying convention and frequently find themselves at odds with Commanders. </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">Meet your team, Meet your opponents</div>
+        <div class="col-lg-7"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-1" id="space1"></div>
+        <div class ="col-lg-2" id="boxes1"></div>
+        <div class ="col-lg-2" id="boxes2"></div>
+        <div class ="col-lg-2" id="boxes3"></div>
+        <div class="col-lg-5" id="space2"></div>
+      </div>
+
+      <div class="row" id="foot">
+        <div class ="col-lg-2"></div>
+        <div class ="col-lg-8">We now present a cautionary tale for all Visionaries. You are entering Chicago, 1893.</div>
+        <div class ="col-lg-2"></div>
+      </div>
+
+      </div>
+    </div>
+-->

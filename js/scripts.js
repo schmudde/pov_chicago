@@ -23,6 +23,7 @@ var questionnumber = 0;
 
 $(document).ready(function(){
     displaynewquotes();
+    $("#commander").hide();
 });
 
 function displaynewquotes(){
@@ -49,9 +50,9 @@ function displaynewquotes(){
     });
 }
 
-function video() {
-    $("#video-content").show();
+function results() {
     $("#landing").hide();
+    $("#commander").show();
 }
 
 function audio(mode, note) {
@@ -110,7 +111,7 @@ $( "#quote0" ).click(function() {
         chosenQuote("bounceOutLeft");
     }
     else{
-        video();
+        results();
     }
 
 });
@@ -125,7 +126,7 @@ $( "#quote1" ).click(function() {
         var chosenQuote = nextQuestion('#quote1');
         chosenQuote("bounceOutRight");
     } else {
-        video();
+        results();
     }
 
 });
