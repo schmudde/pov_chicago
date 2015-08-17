@@ -16,7 +16,7 @@ body{
 
 #head {
   text-align: center;
-  font-size: 80px;
+  font-size: 100px;
   padding-top: 100px;
   color: #CC0099;
   font-family: 'Squada One', serif;
@@ -75,6 +75,7 @@ h1{
 #text{
   align-items: left;
   height: 150px;
+  font-size: 20px;
 }
 
 #boxes1 {
