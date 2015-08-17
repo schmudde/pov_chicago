@@ -87,12 +87,17 @@ var advanceScore = function() {
     return function () {
         questionnumber++;
         audio(mode, questionnumber);
-        console.log(questionnumber);
-        console.log(". " + "score negative: " + scorenegative + " score positive: " + scorepositive);
+        /*console.log(questionnumber);
+        console.log(". " + "score negative: " + scorenegative + " score positive: " + scorepositive);*/
 
     }
 }
 
+
+$(".splash").click(function() {
+    $(this).hide();
+    $('#landing').show();
+});
 
 $( "#quote0" ).click(function() {
   //add to the correct score based on which kind of quote this is.
