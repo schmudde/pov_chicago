@@ -77,11 +77,65 @@ h1{
   height: 150px;
 }
 
-#boxes {
+#boxes1 {
   align-items: left;
-  outline: #CC0099 solid thick;
+  /*outline: #CC0099 solid thick;*/
   height: 100px;
   padding-top: 100px;
+  background-image: url('../img/VisA.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#boxes2 {
+  align-items: left;
+  /*outline: #CC0099 solid thick;*/
+  height: 100px;
+  padding-top: 100px;
+  background-image: url('../img/VisB.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#boxes3 {
+  align-items: left;
+  /*outline: #CC0099 solid thick;*/
+  height: 100px;
+  padding-top: 100px;
+  background-image: url('../img/VisC.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+#boxes4 {
+  align-items: left;
+  /*outline: #CC0099 solid thick;*/
+  height: 100px;
+  padding-top: 100px;
+  background-image: url('../img/comA.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#boxes5 {
+  align-items: left;
+  /*outline: #CC0099 solid thick;*/
+  height: 100px;
+  padding-top: 100px;
+  background-image: url('../img/comB.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#boxes6 {
+  align-items: left;
+  /*outline: #CC0099 solid thick;*/
+  height: 100px;
+  padding-top: 100px;
+  background-image: url('../img/comC.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #foot{
